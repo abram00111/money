@@ -15,6 +15,7 @@ class Money extends Model
         'subCategory_id',
         'product_id',
         'price',
+        'date',
         'comment'
     ];
 }

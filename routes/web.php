@@ -5,6 +5,7 @@ use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SubCategoryController;
+use App\Models\MoneyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,10 +45,12 @@ Route::post('/saveIncome', [IncomeController::class, 'saveIncome'])->name('saveI
 Route::get('/delIncome/{id}', [IncomeController::class, 'delIncome'])->name('delIncome');
 
 Route::get('/expenses', [ExpensesController::class, 'allExpenses'])->name('allExpenses');
-Route::get('/addExpenses', [ExpensesController::class, 'addExpenses'])->name('addExpenses');
-Route::post('/storeExpenses', [ExpensesController::class, 'storeExpenses'])->name('storeExpenses');
-Route::get('/editExpenses/{id}', [ExpensesController::class, 'editExpenses'])->name('editExpenses');
-Route::post('/saveExpenses', [ExpensesController::class, 'saveExpenses'])->name('saveExpenses');
-Route::get('/delExpenses/{id}', [ExpensesController::class, 'delExpenses'])->name('delExpenses');
+Route::get('/addExpenses', [ExpensesController::class, 'addExpenses'])->name('addExpense');
+Route::post('/storeExpenses', [ExpensesController::class, 'storeExpenses'])->name('storeExpense');
+Route::get('/editExpenses/{id}', [ExpensesController::class, 'editExpenses'])->name('editExpense');
+Route::post('/saveExpenses', [ExpensesController::class, 'saveExpenses'])->name('saveExpense');
+Route::get('/delExpenses/{id}', [ExpensesController::class, 'delExpenses'])->name('delExpense');
 
-
+Route::get('/editMoney/{id}', [MoneyController::class, 'editMoney'])->name('editMoney');
+Route::post('/saveMoney', [MoneyController::class, 'saveMoney'])->name('saveMoney');
+Route::get('/delMoney/{id}', [MoneyController::class, 'delMoney'])->name('delMoney');

@@ -14,7 +14,8 @@
             <div class="col-12 col-lg-6">
                 <div class="mb-3">
                     <label for="subCategory" class="form-label">Название подкатегории</label>
-                    <input type="text" class="form-control" name="name" id="subCategory" value="{{ old('name', $subCategory->name) }}" required placeholder="Продукты">
+                    <input type="text" class="form-control" name="name" id="subCategory"
+                        value="{{ old('name', $subCategory->name) }}" required placeholder="Продукты">
                 </div>
             </div>
         </div>
@@ -24,11 +25,9 @@
                     <label class="form-label">в какую категорию входит?</label>
                     <select class="selectpicker form-control" name="subCategory" required data-live-search="true">
                         @foreach ($categories as $category)
-                            @if ($loop->first)
-                                <option value="{{ $category->id }}" @if (old('subCategory', $subCategory->category_id) == $category->id) selected="selected" @endif>{{ $category->name }}</option>
-                            @else
-                                <option value="{{ $category->id }}" @if (old('subCategory', $subCategory->category_id) == $category->id) selected="selected" @endif>{{ $category->name }}</option>
-                            @endif
+                            <option value="{{ $category->id }}"
+                                @if (old('subCategory', $subCategory->category_id) == $category->id) selected="selected" @endif>{{ $category->name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>

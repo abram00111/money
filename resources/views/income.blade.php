@@ -13,7 +13,6 @@
             <tr>
                 <th>Категория</th>
                 <th>Сумма</th>
-                <th>Чек</th>
                 <th>Коммент</th>
                 <th>Дата</th>
                 <th colspan="2">Редактировать</th>
@@ -24,9 +23,8 @@
                 <tr>
                     <td>{{ $income->catName }}</td>
                     <td>{{ $income->price }}</td>
-                    <td>{{ $income->cheque }}</td>
                     <td>{{ $income->comment }}</td>
-                    <td>{{ $income->created_at }}</td>
+                    <td>{{ date('d.m.Y', strtotime($income->date)) }}</td>
                     <td><a href="{{ route('editIncome', ['id' => $income->id]) }}"><i class="fas fa-edit"></i></a></td>
                     <td><a href="{{ route('delIncome', ['id' => $income->id]) }}"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>

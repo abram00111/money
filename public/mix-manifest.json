@@ -1,6 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/abr-table.js": "/js/abr-table.js",
+    "/js/changeSelect.js": "/js/changeSelect.js",
+    "/js/money.js": "/js/money.js",
     "/css/app.css": "/css/app.css",
     "/css/style.css": "/css/style.css",
     "/css/abr-table.css": "/css/abr-table.css"

@@ -3,8 +3,8 @@
 @inject('layoutHelper', 'JeroenNoten\LaravelAdminLte\Helpers\LayoutHelper')
 
 @section('adminlte_css')
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/abr-table.css') }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/abr-table.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
 
     @stack('css')

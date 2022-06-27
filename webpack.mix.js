@@ -13,6 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
 .js('resources/js/abr-table.js', 'public/js')
+.js('resources/js/changeSelect.js', 'public/js')
+.js('resources/js/money.js', 'public/js')
 .css('resources/css/abr-table.css', 'public/css')
 .css('resources/css/style.css', 'public/css')
     .postCss('resources/css/app.css', 'public/css', [
